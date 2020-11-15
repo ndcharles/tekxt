@@ -24,7 +24,7 @@ These are the steps to build the summarisation models (BART/T5)
 '''
 
 app = Flask(__name__, template_folder='templates')
-bart_model = BartForConditionalGeneration.from_pretrained('facebook/bart-base')
+bart_model = BartForConditionalGeneration.from_pretrained('facebook/bart-large')
 bart_tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
 
 

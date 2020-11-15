@@ -6,8 +6,8 @@ import json
 from transformers import BartTokenizer, BartForConditionalGeneration, BartConfig
 from transformers import T5Tokenizer, T5ForConditionalGeneration, T5Config
 
-BART_PATH = 'facebook/bart-large'
-T5_PATH = 't5-base'
+BART_PATH = 'facebook/bart-base'
+T5_PATH = 't5-small'
 # BART_PATH = 'model/bart'
 # T5_PATH = 'model/t5'
 
@@ -24,8 +24,8 @@ These are the steps to build the summarisation models (BART/T5)
 '''
 
 app = Flask(__name__, template_folder='templates')
-bart_model = BartForConditionalGeneration.from_pretrained('facebook/bart-large')
-bart_tokenizer = BartTokenizer.from_pretrained('facebook/bart-large')
+bart_model = BartForConditionalGeneration.from_pretrained('facebook/bart-base')
+bart_tokenizer = BartTokenizer.from_pretrained('facebook/bart-basee')
 
 
 t5_model = T5ForConditionalGeneration.from_pretrained(T5_PATH)
